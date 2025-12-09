@@ -1,0 +1,5 @@
+SELECT * FROM Emp
+WHERE salary = (
+SELECT MAX(salary) FROM Emp
+WHERE salary < (SELECT MAX(salary) FROM Emp)
+);
