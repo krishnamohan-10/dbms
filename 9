@@ -1,0 +1,4 @@
+SELECT * FROM Student
+WHERE LENGTH(name) = (
+SELECT MAX(LENGTH(name)) FROM Student
+);
