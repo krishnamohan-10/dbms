@@ -1,0 +1,4 @@
+SELECT * FROM Sailors
+WHERE rating > ALL (
+SELECT rating FROM Sailors WHERE sname = 'Horatio'
+);
