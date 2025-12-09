@@ -1,0 +1,6 @@
+SELECT deptnum
+FROM Emp
+GROUP BY deptnum
+HAVING COUNT(*) >= ALL (
+SELECT COUNT(*) FROM Emp GROUP BY deptnum
+);
