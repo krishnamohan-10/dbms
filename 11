@@ -1,0 +1,7 @@
+SELECT Sid FROM Reserves WHERE Bid IN (
+SELECT Bid FROM Boats WHERE color = 'red'
+)
+UNION
+SELECT Sid FROM Reserves WHERE Bid IN (
+SELECT Bid FROM Boats WHERE color = 'green'
+);
