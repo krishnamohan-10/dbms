@@ -1,0 +1,2 @@
+SELECT * FROM Sailors s INNER JOIN Reserves r ON s.Sid = r.Sid;
+SELECT * FROM Sailors s cross join REserves r;
