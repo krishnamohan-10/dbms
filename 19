@@ -1,0 +1,5 @@
+
+SELECT * FROM Emp
+WHERE designation = 'Clerk' AND salary = (
+SELECT MIN(salary) FROM Emp WHERE designation = 'Clerk'
+);
