@@ -1,0 +1,9 @@
+CREATE OR REPLACE TRIGGER trg_uppercase_student
+BEFORE INSERT OR UPDATE ON student
+FOR EACH ROW
+BEGIN
+    :NEW.name := UPPER(:NEW.name);
+    :NEW.branch := UPPER(:NEW.branch);
+    :NEW.location := UPPER(:NEW.location);
+END;
+/
