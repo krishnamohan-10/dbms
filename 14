@@ -1,0 +1,4 @@
+SELECT * FROM Emp
+WHERE doj IN (
+SELECT doj FROM Emp GROUP BY doj HAVING COUNT(*) > 1
+);
