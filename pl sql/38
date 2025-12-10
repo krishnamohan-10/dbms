@@ -1,0 +1,8 @@
+CREATE OR REPLACE FUNCTION total_students
+RETURN NUMBER AS
+    total NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO total FROM student;
+    RETURN total;
+END;
+/
