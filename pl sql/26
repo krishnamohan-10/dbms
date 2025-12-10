@@ -1,0 +1,12 @@
+DECLARE
+    v_id employees.empno%TYPE := 101;
+    v_name employees.ename%TYPE;
+    v_sal employees.sal%TYPE;
+BEGIN
+    SELECT ename, sal INTO v_name, v_sal
+    FROM employees
+    WHERE empno = v_id;
+
+    DBMS_OUTPUT.PUT_LINE('Name: ' || v_name || '  Salary: ' || v_sal);
+END;
+/
