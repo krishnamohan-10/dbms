@@ -1,0 +1,9 @@
+CREATE OR REPLACE TRIGGER trg_salary_check
+BEFORE INSERT ON employ
+FOR EACH ROW
+BEGIN
+    IF :NEW.salary < 500 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Salary must be >= 500');
+    END IF;
+END;
+/
