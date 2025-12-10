@@ -1,0 +1,6 @@
+-- Full Outer Join
+SELECT * FROM Sailors s
+FULL OUTER JOIN Reserves r ON s.Sid = r.Sid;
+-- Natural Join
+SELECT * FROM Sailors
+NATURAL JOIN Reserves;
