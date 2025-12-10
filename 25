@@ -1,0 +1,5 @@
+SELECT rating, MIN(age) AS youngest_age
+FROM Sailors
+WHERE age >= 18
+GROUP BY rating
+HAVING COUNT(*) >= 2;
