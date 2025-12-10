@@ -1,0 +1,8 @@
+SELECT * FROM Sailors s INNER JOIN Reserves r ON s.Sid = r.Sid;
+SELECT * FROM Sailors s cross join REserves r;
+Full Outer Join
+SELECT * FROM Sailors s
+FULL OUTER JOIN Reserves r ON s.Sid = r.Sid;
+-- Natural Join
+SELECT * FROM Sailors
+NATURAL JOIN Reserves;
