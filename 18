@@ -1,0 +1,4 @@
+SELECT * FROM Emp
+WHERE deptnum = 2 AND salary > ANY (
+SELECT salary FROM Emp WHERE deptnum = 4
+);
