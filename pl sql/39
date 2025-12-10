@@ -1,0 +1,8 @@
+CREATE OR REPLACE PROCEDURE swap(a IN OUT NUMBER, b IN OUT NUMBER) AS
+    temp NUMBER;
+BEGIN
+    temp := a;
+    a := b;
+    b := temp;
+END;
+/
