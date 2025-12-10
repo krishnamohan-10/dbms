@@ -1,0 +1,4 @@
+SELECT name, rollno FROM Student
+WHERE branch IN ('CSE', 'CSM');
+SELECT rollno, name FROM Student
+WHERE branch = 'CSE' OR branch = 'CSM';
