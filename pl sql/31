@@ -1,0 +1,23 @@
+CREATE OR REPLACE PROCEDURE check_prime(n NUMBER) AS
+    i NUMBER := 2;
+    flag BOOLEAN := TRUE;
+BEGIN
+    IF n <= 1 THEN
+        flag := FALSE;
+    ELSE
+        WHILE i <= n/2 LOOP
+            IF MOD(n,i)=0 THEN
+                flag := FALSE;
+                EXIT;
+            END IF;
+            i := i+1;
+        END LOOP;
+    END IF;
+
+    IF flag THEN
+        DBMS_OUTPUT.PUT_LINE('Prime Number');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Not a Prime Number');
+    END IF;
+END;
+/
