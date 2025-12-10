@@ -1,0 +1,4 @@
+SELECT * FROM Emp
+WHERE salary < ALL (
+SELECT salary FROM Emp WHERE designation = 'Manager'
+);
